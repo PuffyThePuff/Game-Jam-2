@@ -6,10 +6,11 @@ using UnityEngine.AI;
 public class PointAndClickController : MonoBehaviour
 {
     public Camera cam;
-
-    [SerializeField] private Transform spotlight;
+    private Transform spotlight;
 
     [SerializeField] private List<GameObject> placeableObjects;
+    [SerializeField] private List<Texture> cookieList;
+    private int index = 0;
 
     private void Start()
     {
@@ -30,8 +31,22 @@ public class PointAndClickController : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                Instantiate(placeableObjects[0]);
-                placeableObjects[0].transform.position = (new Vector3(hit.point.x, 0, hit.point.z));
+                Instantiate(placeableObjects[index]);
+                placeableObjects[index].transform.position = hit.point;
+            }
+
+            //scroll up
+            if (Input.mouseScrollDelta.y > 0)
+            {
+                index++;
+                index = Mathf.Clamp(index, 0, placeableObjects.Count - 1);
+            }
+
+            //scroll down
+            if (Input.mouseScrollDelta.y < 0)
+            {
+                index--;
+                index = Mathf.Clamp(index, 0, placeableObjects.Count - 1);
             }
         }
     }
