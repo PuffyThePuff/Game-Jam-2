@@ -27,6 +27,12 @@ public class PointAndClickController : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             spotlight.position = new Vector3(hit.point.x, spotlight.position.y, hit.point.z);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Instantiate(placeableObjects[0]);
+                placeableObjects[0].transform.position = (new Vector3(hit.point.x, 0, hit.point.z));
+            }
         }
     }
 }
