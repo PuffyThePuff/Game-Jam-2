@@ -7,12 +7,11 @@ public class GoalDetector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameEvents.current.onAntReachGoal += OnAntReachGoal;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnAntReachGoal()
     {
-        
+        //update UI here
     }
 }
