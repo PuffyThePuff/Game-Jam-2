@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 55521267}
   - component: {fileID: 55521269}
   - component: {fileID: 55521268}
+  - component: {fileID: 55521270}
   m_Layer: 5
   m_Name: Ants
   m_TagString: Untagged
@@ -158,7 +159,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 100}
+  m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &55521268
 MonoBehaviour:
@@ -202,6 +203,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55521266}
   m_CullTransparentMesh: 1
+--- !u!114 &55521270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55521266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6837f16258a32664e969f4724c1ea934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  antMax: 10
 --- !u!1 &69682793
 GameObject:
   m_ObjectHideFlags: 0
