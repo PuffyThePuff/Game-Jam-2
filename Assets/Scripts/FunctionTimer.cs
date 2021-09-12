@@ -5,14 +5,40 @@ using UnityEngine;
 
 public class FunctionTimer
 {
+    public static FunctionTimer Create(Action action, float timer)
+    {
+        GameObject gameObject = new GameObject("FunctionTimer", typeof(MonoBehaviorHook));
+
+        FunctionTimer functionTimer = new FunctionTimer(action, timer, gameObject);
+
+        gameObject.GetComponent<MonoBehaviorHook>().onUpdate = functionTimer.Update;
+
+        return functionTimer;
+    }
+
+    //dummy class to have access to monobehavior functions
+    private class MonoBehaviorHook : MonoBehaviour
+    {
+        public Action onUpdate;
+        private void Update()
+        {
+            if (onUpdate != null)
+            {
+                onUpdate();
+            }
+        }
+    }
+
     private Action action;
     private float timer;
+    private GameObject gameObject;
     private bool isDestroyed;
 
-    public FunctionTimer(Action action, float timer)
+    private FunctionTimer(Action action, float timer, GameObject gameObject)
     {
         this.action = action;
         this.timer = timer;
+        this.gameObject = gameObject;
         isDestroyed = false;
     }
 
@@ -32,5 +58,6 @@ public class FunctionTimer
     private void DestroySelf()
     {
         isDestroyed = true;
+        UnityEngine.Object.Destroy(gameObject);
     }
 }
