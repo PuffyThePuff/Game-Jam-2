@@ -107,6 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  spotlight: {fileID: 0}
+  spotlight: {fileID: 939609281360191178}
   placeableObjects:
   - {fileID: 0}
+  cookieList: []
+  index: 0

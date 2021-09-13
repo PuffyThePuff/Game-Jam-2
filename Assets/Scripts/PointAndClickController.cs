@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class PointAndClickController : MonoBehaviour
 {
     public Camera cam;
-    private Transform spotlight;
+    [SerializeField] private GameObject spotlight;
 
     [SerializeField] private List<GameObject> placeableObjects;
     [SerializeField] private List<Texture> cookieList;
@@ -14,7 +13,7 @@ public class PointAndClickController : MonoBehaviour
 
     private void Start()
     {
-        spotlight = this.GetComponent<Transform>();
+
     }
 
     // Update is called once per frame
@@ -27,12 +26,13 @@ public class PointAndClickController : MonoBehaviour
         //returns true if ray hits an object
         if (Physics.Raycast(ray, out hit))
         {
-            spotlight.position = new Vector3(hit.point.x, spotlight.position.y, hit.point.z);
+            spotlight.transform.position = new Vector3(hit.point.x, spotlight.transform.position.y, hit.point.z);
 
             if (Input.GetMouseButtonDown(0))
             {
                 Instantiate(placeableObjects[index]);
                 placeableObjects[index].transform.position = hit.point;
+                placeableObjects[index].SetActive(true);
             }
 
             //scroll up
@@ -40,6 +40,7 @@ public class PointAndClickController : MonoBehaviour
             {
                 index++;
                 index = Mathf.Clamp(index, 0, placeableObjects.Count - 1);
+                spotlight.GetComponent<Light>().cookie = cookieList[index];
             }
 
             //scroll down
@@ -47,6 +48,7 @@ public class PointAndClickController : MonoBehaviour
             {
                 index--;
                 index = Mathf.Clamp(index, 0, placeableObjects.Count - 1);
+                spotlight.GetComponent<Light>().cookie = cookieList[index];
             }
         }
     }
