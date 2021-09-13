@@ -18,7 +18,7 @@ public class FaceDirectionMoving : MonoBehaviour
         if (rb.velocity.normalized != Vector3.zero)
         {
             transform.forward = rb.velocity.normalized;
-            transform.SetPositionAndRotation(transform.position, new Quaternion(0, transform.rotation.y, transform.rotation.z, transform.rotation.w));
+            transform.eulerAngles = new Vector3(0, transform.rotation.y, transform.rotation.z);
         }
     }
 }

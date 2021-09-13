@@ -19,12 +19,6 @@ public class AntSpawner : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void SpawnObject()
     {
         Instantiate(objectToSpawn);
