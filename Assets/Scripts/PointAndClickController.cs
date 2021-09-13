@@ -10,7 +10,7 @@ public class PointAndClickController : MonoBehaviour
 
     [SerializeField] private List<GameObject> placeableObjects;
     [SerializeField] private List<Texture> cookieList;
-    private int index = 0;
+    public int index = 0;
 
     private void Start()
     {
