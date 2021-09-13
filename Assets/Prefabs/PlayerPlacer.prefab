@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 939609281360191176}
   - component: {fileID: 939609281360191177}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: PlayerPlacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
