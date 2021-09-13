@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
-    public void SwitchSceneToFirstLevel()
+    public void LoadCurrentScene()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

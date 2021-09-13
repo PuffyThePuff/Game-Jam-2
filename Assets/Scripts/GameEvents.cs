@@ -20,4 +20,22 @@ public class GameEvents : MonoBehaviour
             onAntReachGoal();
         }
     }
+
+    public event Action onAntDeath;
+    public void AntDeath()
+    {
+        if (onAntDeath != null)
+        {
+            onAntDeath();
+        }
+    }
+
+    public event Action onGameOver;
+    public void GameOver()
+    {
+        if (onGameOver != null)
+        {
+            onGameOver();
+        }
+    }
 }

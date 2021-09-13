@@ -17,14 +17,18 @@ public class GoalDetector : MonoBehaviour
         string newText;
         newText = "Ants: " + antCurrent + "/" + antMax;
         text.text = newText;
-        GameEvents.current.onAntReachGoal += OnAntReachGoal;
+        GameEvents.current.onAntDeath += OnAntDeath;
     }
 
-    private void OnAntReachGoal()
+    private void OnAntDeath()
     {
         antCurrent--;
         string newText;
-        newText = "Ants: " + antCurrent + "/" + antMax;
+        newText = "Ants left: " + antCurrent + "/" + antMax;
         text.text = newText;
+        if (antCurrent <= 0)
+        {
+            GameEvents.current.GameOver();
+        }
     }
 }
