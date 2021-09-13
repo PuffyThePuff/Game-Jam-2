@@ -455,7 +455,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387273232}
-  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -670,11 +670,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1599405114 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7697041037418885662, guid: c88d76813ab1dca4a8f556044958712c, type: 3}
-  m_PrefabInstance: {fileID: 1629129348}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1629129348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -889,7 +884,7 @@ PrefabInstance:
     - target: {fileID: 1161321524948106443, guid: b3594c59d468eb045a9b10ec56d31a8e, type: 3}
       propertyPath: objectToSpawn
       value: 
-      objectReference: {fileID: 1599405114}
+      objectReference: {fileID: 7697041037418885662, guid: c88d76813ab1dca4a8f556044958712c, type: 3}
     - target: {fileID: 1161321524948106455, guid: b3594c59d468eb045a9b10ec56d31a8e, type: 3}
       propertyPath: m_RootOrder
       value: 8
