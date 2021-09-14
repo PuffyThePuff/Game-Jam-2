@@ -6,7 +6,10 @@ public class DeathTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        GameEvents.current.AntDeath();
-        other.gameObject.SetActive(false);
+        if (other.CompareTag("Ant"))
+        {
+            GameEvents.current.AntDeath();
+            other.gameObject.SetActive(false);
+        }
     }
 }
