@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 638ed8b7d85c51a4dac710dced51bfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 7697041037418885662, guid: c88d76813ab1dca4a8f556044958712c, type: 3}
+  objectToSpawn: {fileID: 1715103906888602, guid: 33b828b8f1c31334988de54e3fe47ee6, type: 3}
   maxObjects: 10
 --- !u!1 &1161321525715802448
 GameObject:
