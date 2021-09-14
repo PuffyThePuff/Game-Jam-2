@@ -4862,6 +4862,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 414440443105646878, guid: 4b3cd0454adc4734bb41536e8b5201e8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 414440443105646878, guid: 4b3cd0454adc4734bb41536e8b5201e8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 414440443105646878, guid: 4b3cd0454adc4734bb41536e8b5201e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level 3
       objectReference: {fileID: 0}
@@ -5016,6 +5024,10 @@ PrefabInstance:
     - target: {fileID: 7725932919402555261, guid: 4b3cd0454adc4734bb41536e8b5201e8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966773171542417933, guid: 4b3cd0454adc4734bb41536e8b5201e8, type: 3}
+      propertyPath: m_Text
+      value: BACK TO MENU
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b3cd0454adc4734bb41536e8b5201e8, type: 3}

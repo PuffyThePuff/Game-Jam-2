@@ -539,12 +539,12 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Objectives:
 
-    - guide the red boxes to the house
+    - Guide the red boxes to the house
 
-    - atleast one
-    is enough to win the level
+    - If you lose
+    all of them to hazards game over
 
-    - if you lose all of them to hazards game over'
+    - At least one is enough to win the level'
 --- !u!222 &270218231
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -714,7 +714,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 509477494}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1699798902}
+        m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level 1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &509477494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,10 +1095,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Controls:
 
-    - Is left click to place a wall
+    - Left click to place a wall
 
-    - Scroll to change
-    angle, hold right to erase walls
+    - Scroll to change angle,
+    hold right to erase walls
 
     - Esc to bring up pause menu'
 --- !u!222 &1017143569
@@ -1536,6 +1548,7 @@ GameObject:
   - component: {fileID: 1699798901}
   - component: {fileID: 1699798900}
   - component: {fileID: 1699798899}
+  - component: {fileID: 1699798902}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1591,6 +1604,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1699798902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699798898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f0b567cf679b34ca8f8d6dde7ce32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1750935075
 GameObject:
   m_ObjectHideFlags: 0

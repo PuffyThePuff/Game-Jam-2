@@ -14,8 +14,11 @@ public class AntSpawner : MonoBehaviour
         spawnPos = this.GetComponent<Transform>().position;
         for (int i = 0; i < maxObjects; i++)
         {
-            FunctionTimer.Create(SpawnObject, 2 * i);
+            FunctionTimer.Create(SpawnObject, 2 * (i + 1));
         }
+        Debug.Log(spawnPos.x);
+        Debug.Log(spawnPos.y);
+        Debug.Log(spawnPos.z);
     }
 
     private void SpawnObject()
