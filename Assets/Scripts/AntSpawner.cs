@@ -5,7 +5,6 @@ using UnityEngine;
 public class AntSpawner : MonoBehaviour
 {
     private Vector3 spawnPos;
-
     [SerializeField] private GameObject objectToSpawn;
     [SerializeField] private int maxObjects = 10;
 

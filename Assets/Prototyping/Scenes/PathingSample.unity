@@ -747,7 +747,7 @@ PrefabInstance:
     - target: {fileID: 1161321524948106443, guid: b3594c59d468eb045a9b10ec56d31a8e, type: 3}
       propertyPath: objectToSpawn
       value: 
-      objectReference: {fileID: 7697041037418885662, guid: c88d76813ab1dca4a8f556044958712c, type: 3}
+      objectReference: {fileID: 1715103906888602, guid: 33b828b8f1c31334988de54e3fe47ee6, type: 3}
     - target: {fileID: 1161321524948106455, guid: b3594c59d468eb045a9b10ec56d31a8e, type: 3}
       propertyPath: m_RootOrder
       value: 7
