@@ -1335,6 +1335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 6022693660713922562}
+  gameOverUI: {fileID: 4311584322271713284}
+  levelCompleteUI: {fileID: 1671950704083088757}
 --- !u!1 &6917409285288141320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,8 +1555,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6022693662392544941}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: LoadMenu
-        m_Mode: 1
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

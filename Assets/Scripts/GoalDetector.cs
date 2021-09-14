@@ -43,7 +43,7 @@ public class GoalDetector : MonoBehaviour
         antLeft--;
         if (antLeft <= 0 && antInGoal > 0)
         {
-
+            GameEvents.current.LevelComplete();
         }
     }
 }

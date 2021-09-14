@@ -10,10 +10,12 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private GameObject levelCompleteUI;
 
     private void Start()
     {
         GameEvents.current.onGameOver += OnGameOver;
+        GameEvents.current.onLevelComplete += OnLevelComplete;
     }
 
     // Update is called once per frame
@@ -58,9 +60,20 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene((string)sceneName);
+    }
+
     private void OnGameOver()
     {
         gameOverUI.SetActive(true);
+        GameIsOver = true;
+    }
+
+    private void OnLevelComplete()
+    {
+        levelCompleteUI.SetActive(true);
         GameIsOver = true;
     }
 }
