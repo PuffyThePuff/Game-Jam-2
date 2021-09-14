@@ -6,8 +6,15 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public static bool GameIsOver = false;
 
     [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private GameObject gameOverUI;
+
+    private void Start()
+    {
+        GameEvents.current.onGameOver += OnGameOver;
+    }
 
     // Update is called once per frame
     void Update()
@@ -46,6 +53,14 @@ public class PauseMenu : MonoBehaviour
     }
     public void LoadCurrentScene()
     {
+        GameIsOver = false;
+        GameIsPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void OnGameOver()
+    {
+        gameOverUI.SetActive(true);
+        GameIsOver = true;
     }
 }

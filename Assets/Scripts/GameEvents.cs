@@ -38,4 +38,13 @@ public class GameEvents : MonoBehaviour
             onGameOver();
         }
     }
+
+    public event Action onLevelComplete;
+    public void LevelComplete()
+    {
+        if (onLevelComplete != null)
+        {
+            onLevelComplete();
+        }
+    }
 }

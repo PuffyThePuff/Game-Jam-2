@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9154527062982174951}
   m_Layer: 0
   m_Name: Wall1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9154527062982174938}
-  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -1.81, y: 0, z: -13.67}
-  m_LocalScale: {x: 1, y: 3, z: 6}
+  m_LocalRotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+  m_LocalPosition: {x: 11.193981, y: 4.769595e-18, z: -10.740171}
+  m_LocalScale: {x: 1.5, y: 3, z: 9}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

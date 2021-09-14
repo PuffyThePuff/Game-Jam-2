@@ -10,6 +10,13 @@ public class PointAndClickController : MonoBehaviour
     [SerializeField] private GameObject placeableObject;
     public int index = 0;
 
+    private Texture cookie;
+
+    private void Start()
+    {
+        cookie = spotlight.GetComponent<Light>().cookie;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -24,23 +31,38 @@ public class PointAndClickController : MonoBehaviour
         {
             spotlight.transform.position = new Vector3(hit.point.x, spotlight.transform.position.y, hit.point.z);
 
-            if (Input.GetMouseButtonDown(0) && !PauseMenu.GameIsPaused)
+            if (Input.GetMouseButtonDown(0) && !PauseMenu.GameIsPaused && !PauseMenu.GameIsOver)
             {
                 Instantiate(placeableObject);
                 placeableObject.transform.position = hit.point;
-                placeableObject.transform.localRotation = Quaternion.Euler(0f, -(index * 22.5f + 45f), 0f);
+                placeableObject.transform.localRotation = Quaternion.Euler(0f, -(index * 22.5f - 45f), 0f);
                 placeableObject.SetActive(true);
             }
 
+            if (Input.GetMouseButton(1) && !PauseMenu.GameIsPaused && !PauseMenu.GameIsOver)
+            {
+                spotlight.GetComponent<Light>().color = Color.red;
+                spotlight.GetComponent<Light>().cookie = null;
+                if (hit.collider.CompareTag("Wall"))
+                {
+                    hit.collider.gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                spotlight.GetComponent<Light>().color = Color.white;
+                spotlight.GetComponent<Light>().cookie = cookie;
+            }
+
             //scroll up
-            if (Input.mouseScrollDelta.y > 0)
+            if (Input.mouseScrollDelta.y > 0 && !Input.GetMouseButton(1))
             {
                 index++;
                 if (index > 8) { index = 1; }
             }
 
             //scroll down
-            if (Input.mouseScrollDelta.y < 0)
+            if (Input.mouseScrollDelta.y < 0 && !Input.GetMouseButton(1))
             {
                 index--;
                 if (index < 0) { index = 7; }
